@@ -1,0 +1,44 @@
+Intro animation (gif?/flash?)
+  --21 November 1917--
+  https://en.wikipedia.org/wiki/LZ_104_(L_59)#Africa_flight
+    --According to wiki, Sudan was colonized in 1899, so the theory that the African player would be totally
+      uncivilized is far fetched, find another country in the flight path of L-59 that's more desolate?
+      --Player will be referred to as Sudanese for now
+
+  1. Clip of Germans radioing with Austrian's about South African Zeppelin mission
+  2. Indian Jones style map showing zeppelin trip from Germany --> Austria --> Sudan
+  3. Clip of British taking over landing zone in SA, screen splits diagonally showing Austrians/German's instructing zeppelin to return home
+  4. As blimp anim turns around to head back to Austria, show aerial shot of an Sudanese villager watching it in amazement
+  5. Fade into top down?
+
+Game Theory
+  - player controls African dude who has never seen tech/civilization in his life
+  - Inspired (lightbulb) to build some tech
+  - Religion forms around worshipping the zeppelin
+  - It's disappearance is a bad omen that it will return in force (incentive to prepare)
+
+  - player can either 1) develop tech or 2) expand his villager
+  - GOAL: is to find the balance between expanding your village and developing tech (third tree of development?)
+
+Environment class
+  - As soon as player gets control, a timer counting down until (COUNTRY'S COLONIZATION DATE???) -- in game difficulty between 1-3 hours of play time/prep
+  - Once X time has elapsed, White people come to colonize the village, Things Fall Apart style showdown
+  - Player loses every time, but score is calculated by their capability to survive
+
+  - Other factors -disease, poor agriculture? etc. impact population and tech speeds
+
+Player class (top down? isometric view? side scroller?)
+  - Foraging Screen
+    - can move around an collect resources
+    - build tech manually
+  - Village overview screen
+    - Can teach (mechanic?) his family --> neighbors --> village -->....--> African Metropolis creating workers
+
+  - Can upgrade stats:
+    -speed, hunger(?), tech/intellect, language/communication
+
+Worker class
+  - Can do automated tasks (see Civ city screen)
+
+Society class
+  - collection of workers the player can automate for tasks
