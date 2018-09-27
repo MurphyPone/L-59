@@ -2,20 +2,26 @@
 let gamestate;
 let player;
 let village;
+let coins = [];
+let font;
 
 function setup() {
 	//Configure
-	createCanvas(windowWidth, windowHeight);
+	var cnv = createCanvas(windowWidth, windowHeight);
+	cnv.style('display', 'block');
 	frameRate(60);
-	fullscreen();
 
 	//Initialize vars
 	gamestate = "player"; //player, village, intro?
 	player = new Player();
 	village = new Village();
+	initCoins();
+
 
 	// Intro sequence?
 }
+
+function windowResized() { resizeCanvas(windowWidth, windowHeight); }
 
 function draw() {
 	background(51);
@@ -23,6 +29,7 @@ function draw() {
 	if (gamestate == "player") {
 		player.render();
 		player.move();
+		renderCoins();
  	}
 
 	if (gamestate == "village") {
@@ -30,16 +37,29 @@ function draw() {
 	}
 }
 
+
+
+//Coin Helpers
+function initCoins() {
+	for(var i = 0; i < 99; i++) {
+		coins[i] = new Coin(random(5), random(0, windowWidth), random(0, windowHeight));
+	}
+}
+
+function renderCoins() {
+	for(var i = 0; i < 10; i++) {
+		coins[i].render();
+	}
+}
+
 //Gamestate handlers --> probably depricate to util
 
 function toggleGamestate() {
-	console.log("Made it in check");
-
 	if(gamestate == "player") {
-		gamestate == "village";
+		gamestate = "village";
 		return;
-	} else { 
-		gamestate == "player";
+	} else if (gamestate == "village") {
+		gamestate = "player";
 		return;
 	}
 }
